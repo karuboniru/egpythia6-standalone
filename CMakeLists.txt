@@ -51,12 +51,12 @@ root_generate_dictionary(
 )
 
 target_link_libraries(EGPythia6
-  # Pythia6
-  Pythia6
-  ROOT::Core
-  ROOT::EG
-  ROOT::Graf
-  ROOT::Physics
+  PRIVATE
+    Pythia6
+    ROOT::Core
+    ROOT::EG
+    ROOT::Graf
+    ROOT::Physics
 )
 
 # Installation rules
