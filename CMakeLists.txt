@@ -41,6 +41,11 @@ add_library(EGPythia6 SHARED
   src/TPythia6.cxx
   src/TPythia6Decayer.cxx)
 
+set_target_properties(EGPythia6 PROPERTIES
+    VERSION 6.33.01
+    SOVERSION 6.33
+)
+
 root_generate_dictionary(
   G__EGPythia6
   TMCParticle.h
@@ -63,6 +68,7 @@ target_link_libraries(EGPythia6
 install(TARGETS EGPythia6
   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
 install(DIRECTORY inc/
